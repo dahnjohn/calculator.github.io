@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    
+</head>
+
+<style>
+    .left {
+        background-color:#d81143 ;
+        font-family: 'handlee', serif;
+    }
+    .ass{
+        padding-top: 30px;
+    }
+    
+    .title{
+        font-family: Indie Flower;
+    }
+    .line{
+        border: 1px solid #d81143;
+    }
+    .subTitle{
+        opacity: 90%;
+    }
+</style>
+
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 left text-center text-light" >
+                <h1 class="ass">Assignments</h1>
+            </div>
+            <div class="col-md-9">
+                
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <h1 class="text-center title">Conversion Calculator</h1>
+                        <hr class="line">
+                    </div>
+                </div>
+                
+
+
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row border">
+
+                                <div class="row text-center my-3">
+                                    <h3 class="subTitle"><i class="fa fa-tachometer "></i> Weight Converter</h3>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title"><input class="form-control border border-0 text-center" id="wInput" type="number" placeholder="type here"></h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Kilogram</h6>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title" id="gresult">00</h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary" id="gUnit">Kilogram</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="row text-center my-3">
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="wconvertGram()">Gram</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="wconvertMlGram()">Milligram</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="wconvertPound()">Pound</button></div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row border">
+
+                                <div class="row text-center my-3">
+                                    <h3 class="subTitle"><i class="	fa fa-arrows-h"></i> Length Converter</h3>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title"><input class="form-control border border-0 text-center" id="lInput" type="number" placeholder="type here"></h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Meter</h6>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title" id="lresult">00</h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary" id="lUnit">Meter</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="row text-center my-3">
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertKilo()">Kilometer</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertCenti()">Centimeter</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertMillimeter()">Pound</button></div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row border">
+
+                                <div class="row text-center my-3">
+                                    <h3 class="subTitle"><i class="fa fa-clock-o"></i> Time Converter</h3>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title"><input class="form-control border border-0 text-center" id="tInput" type="number" placeholder="type here"></h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Minute</h6>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title" id="tresult">00</h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary" id="tUnit">Minute</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="row text-center my-3">
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="tconvertMilli()">Millisecond</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="tconvertHour()">Hour</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="tconvertSecond()">Second</button></div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row border">
+
+                                <div class="row text-center my-3">
+                                    <h3 class="subTitle"><i class="fa fa-thermometer-4"></i> Temperature Converter</h3>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title"><input class="form-control border border-0 text-center" id="tempInput" type="number" placeholder="type here"></h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Celsius</h6>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 ">
+                                        <div class="card-body text-center">
+                                            <h2 class="card-title" id="tempresult">00</h2>
+                                            <hr class="my-1">
+                                            <h6 class="card-subtitle mb-2 text-body-secondary" id="tempUnit">Celsius</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="row text-center my-3">
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="tempconvertCel()">Fahrenheit</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="tempconvertKelvin()">Kelvin</button></div>
+                                    <!-- <div class="col-sm-4"><button type="button" class="btn btn-outline-danger" onclick="lconvertMillimeter()">Pound</button></div> -->
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        
+        
+        
+        function wconvertGram(){
+            let wUserInput = parseInt(document.getElementById("wInput").value);
+            document.getElementById("gresult").innerHTML = wUserInput * 1000;
+            document.getElementById("gUnit").innerHTML = "Gram";
+        
+        }
+        function wconvertMlGram(){
+            let wUserInput = parseInt(document.getElementById("wInput").value);
+            document.getElementById("gresult").innerHTML = wUserInput * 1000000;
+            document.getElementById("gUnit").innerHTML = "Milligrams";
+        
+        }
+        function wconvertPound(){
+            let wUserInput = parseInt(document.getElementById("wInput").value);
+            document.getElementById("gresult").innerHTML = wUserInput * 2.205;
+            document.getElementById("gUnit").innerHTML = "Pound";
+        
+        }
+
+        
+
+        function lconvertKilo(){
+            let lUserInput = parseInt(document.getElementById("lInput").value);
+            document.getElementById("lresult").innerHTML = lUserInput / 1000;
+            document.getElementById("lUnit").innerHTML = "Kilometer";
+        
+        }
+        function lconvertCenti(){
+            let lUserInput = parseInt(document.getElementById("lInput").value);
+            document.getElementById("lresult").innerHTML = lUserInput * 100;
+            document.getElementById("lUnit").innerHTML = "Centimeter";
+        
+        } function lconvertMillimeter(){
+            let lUserInput = parseInt(document.getElementById("lInput").value);
+            document.getElementById("lresult").innerHTML = lUserInput * 1000;
+            document.getElementById("lUnit").innerHTML = "Millimeter";
+        
+        }
+
+
+
+        function tconvertMilli(){
+            let tUserInput = parseInt(document.getElementById("tInput").value);
+            document.getElementById("tresult").innerHTML = tUserInput * 60000;
+            document.getElementById("tUnit").innerHTML = "Millisecond";
+        
+        }function tconvertHour(){
+            let tUserInput = parseInt(document.getElementById("tInput").value);
+            document.getElementById("tresult").innerHTML = tUserInput / 60;
+            document.getElementById("tUnit").innerHTML = "Hour";
+        
+        }function tconvertSecond(){
+            let tUserInput = parseInt(document.getElementById("tInput").value);
+            document.getElementById("tresult").innerHTML = tUserInput * 60;
+            document.getElementById("tUnit").innerHTML = "Second";
+        
+        }
+
+
+        function tempconvertCel(){
+            let tUserInput = parseInt(document.getElementById("tempInput").value);
+            document.getElementById("tempresult").innerHTML = (tUserInput * 9/5) + 32;
+            document.getElementById("tempUnit").innerHTML = "Fahrenheit";
+        
+        }function tempconvertKelvin(){
+            let tUserInput = parseInt(document.getElementById("tempInput").value);
+            document.getElementById("tempresult").innerHTML = tUserInput + 273.15;
+            document.getElementById("tempUnit").innerHTML = "Kelvin";
+        
+        }
+
+
+
+
+
+
+
+    </script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
