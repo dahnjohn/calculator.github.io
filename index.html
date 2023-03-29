@@ -121,7 +121,7 @@
                                 <div class="row text-center my-3">
                                     <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertKilo()">Kilometer</button></div>
                                     <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertCenti()">Centimeter</button></div>
-                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertMillimeter()">Pound</button></div>
+                                    <div class="col-sm-4 mb-2"><button type="button" class="btn btn-outline-danger" onclick="lconvertMillimeter()">Millimeter</button></div>
                                 </div>
                             
                             </div>
@@ -222,20 +222,34 @@
         
         function wconvertGram(){
             let wUserInput = parseInt(document.getElementById("wInput").value);
-            document.getElementById("gresult").innerHTML = wUserInput * 1000;
-            document.getElementById("gUnit").innerHTML = "Gram";
+
+            if(!wUserInput){
+                alert("No inputs");
+            }else{
+                document.getElementById("gresult").innerHTML = wUserInput * 1000;
+                document.getElementById("gUnit").innerHTML = "Gram";
+            }
         
         }
         function wconvertMlGram(){
             let wUserInput = parseInt(document.getElementById("wInput").value);
+
+            if(!wUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("gresult").innerHTML = wUserInput * 1000000;
             document.getElementById("gUnit").innerHTML = "Milligrams";
+            }
         
         }
         function wconvertPound(){
             let wUserInput = parseInt(document.getElementById("wInput").value);
+            if(!wUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("gresult").innerHTML = wUserInput * 2.205;
             document.getElementById("gUnit").innerHTML = "Pound";
+            }
         
         }
 
@@ -243,19 +257,31 @@
 
         function lconvertKilo(){
             let lUserInput = parseInt(document.getElementById("lInput").value);
+            if(!lUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("lresult").innerHTML = lUserInput / 1000;
             document.getElementById("lUnit").innerHTML = "Kilometer";
+            }
         
         }
         function lconvertCenti(){
             let lUserInput = parseInt(document.getElementById("lInput").value);
+            if(!lUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("lresult").innerHTML = lUserInput * 100;
             document.getElementById("lUnit").innerHTML = "Centimeter";
+            }
         
         } function lconvertMillimeter(){
             let lUserInput = parseInt(document.getElementById("lInput").value);
+            if(!lUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("lresult").innerHTML = lUserInput * 1000;
             document.getElementById("lUnit").innerHTML = "Millimeter";
+            }
         
         }
 
@@ -263,31 +289,51 @@
 
         function tconvertMilli(){
             let tUserInput = parseInt(document.getElementById("tInput").value);
+            if(!tUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("tresult").innerHTML = tUserInput * 60000;
             document.getElementById("tUnit").innerHTML = "Millisecond";
+            }
         
         }function tconvertHour(){
             let tUserInput = parseInt(document.getElementById("tInput").value);
+            if(!tUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("tresult").innerHTML = tUserInput / 60;
             document.getElementById("tUnit").innerHTML = "Hour";
+            }
         
         }function tconvertSecond(){
             let tUserInput = parseInt(document.getElementById("tInput").value);
+            if(!tUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("tresult").innerHTML = tUserInput * 60;
             document.getElementById("tUnit").innerHTML = "Second";
+            }
         
         }
 
 
         function tempconvertCel(){
             let tUserInput = parseInt(document.getElementById("tempInput").value);
+            if(!tUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("tempresult").innerHTML = (tUserInput * 9/5) + 32;
             document.getElementById("tempUnit").innerHTML = "Fahrenheit";
+            }
         
         }function tempconvertKelvin(){
             let tUserInput = parseInt(document.getElementById("tempInput").value);
+            if(!tUserInput){
+                alert("No inputs");
+            }else{
             document.getElementById("tempresult").innerHTML = tUserInput + 273.15;
             document.getElementById("tempUnit").innerHTML = "Kelvin";
+            }
         
         }
 
